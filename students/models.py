@@ -5,7 +5,7 @@ class Stud(models.Model):
     s_class = models.CharField(max_length=255)
     s_addr = models.CharField(max_length=255)
     s_school = models.CharField(max_length=255)
-    s_email = models.EmailField(max_length=255)
+    s_email = models.EmailField(max_length=255,unique=True)
 
     def __str__(self):
         return self.s_name
