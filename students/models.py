@@ -6,3 +6,6 @@ class Stud(models.Model):
     s_addr = models.CharField(max_length=255)
     s_school = models.CharField(max_length=255)
     s_email = models.EmailField(max_length=255)
+
+    def __str__(self):
+        return self.s_name

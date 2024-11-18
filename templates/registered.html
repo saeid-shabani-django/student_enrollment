@@ -1,0 +1,26 @@
+<html>
+    {% include '_base.html' %}
+  
+  <br><br>
+  <!DOCTYPE html>
+<html>
+<body>
+    <center>
+    <h4>
+{% for student in students%}
+   full name : {{student.s_name}}<br>
+    class: {{student.s_class}}<br>
+    email address: {{student.s_email}}<br>
+   school: {{student.s_school}}<br>
+    {{student.s_addr}}<br>
+    <p>-------------------</p>
+    <p>-------------------</p>
+{%endfor%}
+    </h4>
+</center>
+
+    
+</body>
+</html>
+
+</html>

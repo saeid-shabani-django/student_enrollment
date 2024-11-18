@@ -1,0 +1,33 @@
+<html>
+    {% include '_base.html' %}
+  
+  <br><br>
+  <!DOCTYPE html>
+<html>
+<body>
+<center>
+    <h1> {{title}} </h1>
+
+<form action="" method = 'POST'>
+    {% csrf_token %}
+  <label for="fname">full name:</label><br>
+  <input type="text" id="fname" name='s_name'><br><br>
+  <label for="fclass">student class:</label><br>
+  <input type="text" id="fclass" name='s_class'><br><br>
+  <label for="faddr">address:</label><br>
+  <input type="text" id="faddr" name='s_addr'><br><br>
+  <label for="fschool">student school:</label><br>
+  <input type="text" id="fschool" name='s_school'><br><br>
+  <label for="femail">email address:</label><br>
+  <input type="text" id="femail" name='s_email'><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+<p>Notice that the value of the "First name" field will not be submitted, because the input element does not have a name attribute.</p>
+</center>
+</body>
+</html>
+
+</html>
