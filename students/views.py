@@ -49,7 +49,18 @@ def search(request):
     return render(request,'search.html')
 
 
-
-    
+# by this function we remove a student from database
+def dropout(request):
+    if request.method == 'POST':
+        s_name = request.POST.get('nameremove')
+        s_class = request.POST.get('classremove')
+        items = Stud.objects.filter(s_name=s_name,s_class=s_class).all()
+        if not items.exists():
+            return HttpResponse('<h2>there is no student with this properties</h2>')
+        for item in items:
+            print(item)
+            item.delete()
+        return render(request,'ack2.html')
+    return render(request,'dropout.html')
     
     
